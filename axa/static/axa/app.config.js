@@ -9,7 +9,7 @@
     $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
   }
 
-  function config($locationProvider, $stateProvider, $urlRouterProvider) {
+  function config($locationProvider, $stateProvider) {
     $locationProvider.html5Mode(true);
 
     var RegisterState = {

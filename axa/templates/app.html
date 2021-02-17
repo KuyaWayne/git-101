@@ -1,12 +1,6 @@
 {% extends "layout.html" %} {% block body %}
 <div class="recruiter-signInPage" ng-cloak>
-  <div class="main-body">
-    <div class="row no-gutters">
-      <div class="col-md-6">
-        <div class="bodyContents p-3" ui-view style="flex: auto !important; width: 100% !important"></div>
-      </div>
-    </div>
-  </div>
+  <div class="main-body container p-3" ui-view></div>
 </div>
 {% endblock %} {% block customjs %}
 <script src="{[url_for('static', filename='axa/app.js')]}" type="text/javascript" charset="utf-8"></script>
