@@ -1,0 +1,81 @@
+<form name="register.frmRegister" ng-class="{'was-validated': register.frmRegister.$submitted}" class="needs-validation" novalidate>
+  <div class="row">
+    <div class="col">
+      <div class="m-input-container">
+        <input type="text" ng-model="register.data.Name" class="form-control input-text" required />
+        <label class="label" style="--bgcolor: #f5f9ff">Name <span class="required">*</span></label>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm">
+      <div class="m-input-container">
+        <input type="email" ng-model="register.data.Email" class="form-control input-text" required />
+        <label class="label" style="--bgcolor: #f5f9ff">Email <span class="required">*</span></label>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="m-input-container">
+        <input type="text" numbers-only ng-model="register.data.Mobile" class="form-control input-text" required />
+        <label class="label" style="--bgcolor: #f5f9ff">Mobile <span class="required">*</span></label>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm">
+      <div class="m-input-container">
+        <input type="text" ng-model="register.data.PositionApplied" class="form-control input-text" required />
+        <label class="label" style="--bgcolor: #f5f9ff">Position Applied <span class="required">*</span></label>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="m-input-container">
+        <input type="text" ng-model="register.data.Source" class="form-control input-text" required />
+        <label class="label" style="--bgcolor: #f5f9ff">Source <span class="required">*</span></label>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex flex-wrap mx-1 justify-content-end">
+    <button type="submit" class="btn btn-primary" ng-click="register.register(register.data)">
+      <i class="fas fa-user-plus"></i>
+      <span>Register</span>
+    </button>
+  </div>
+</form>
+<hr />
+<form name="register.frmResume" ng-class="{'was-validated': register.frmResume.$submitted}" class="needs-validation" novalidate>
+  <div class="row">
+    <div class="col-sm">
+      <div class="input-group w-auto m-input-container">
+        <input type="text" class="form-control input-text" ng-model="register.resume.name" placeholder=" " style="pointer-events: none" required readonly />
+        <label class="label" style="--bgcolor: #f5f9ff">Resume <span class="required">*</span></label>
+        <div class="input-group-append">
+          <button type="button" class="btn btn-primary" ng-click="register.uploadResume()"><i class="fas fa-upload"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex flex-wrap mx-1 justify-content-end">
+    <button type="submit" class="btn btn-primary" ng-click="register.sendResume(register.data)"><i class="fas fa-file-upload"></i><span>Send Resume</span></button>
+  </div>
+</form>
+<hr />
+<form name="register.frmSchedule" ng-class="{'was-validated': register.frmSchedule.$submitted}" class="needs-validation" novalidate>
+  <div class="row">
+    <div class="col-12 col-sm">
+      <div class="m-input-container">
+        <input type="text" class="form-control input-text" ng-change="register.changeTime()" ng-model="register.date" autocomplete="off" uib-datepicker-popup="MMMM dd, yyyy" ng-click="isDateOpen = !isDateOpen" on-open-focus="false" is-open="isDateOpen" close-text="Close" required />
+        <label class="label" style="--bgcolor: #f5f9ff">Date <span class="required">*</span></label>
+      </div>
+    </div>
+    <div class="col-12 col-sm uib-time-picker" style="top: -1px">
+      <div uib-timepicker show-spinners="false" ng-model="register.time" ng-required style="margin-bottom: 0.875em"></div>
+    </div>
+  </div>
+  <div class="d-flex flex-wrap mx-1 justify-content-end">
+    <button type="submit" class="btn btn-primary" ng-click="register.schedule()">
+      <i class="far fa-calendar-alt"></i>
+      <span>Set Schedule</span>
+    </button>
+  </div>
+</form>

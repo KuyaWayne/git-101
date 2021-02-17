@@ -1,0 +1,69 @@
+.applicant-card {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.applicantCard-body {
+  padding: 1.438em;
+  border-radius: 10px;
+  margin-top: 0.625em;
+  background-color: $white;
+  box-shadow: 0px 1px 1px 0 rgba($black, 0.2);
+
+  &.-archive {
+    background-color: $gray4;
+    box-shadow: 0px 0px 0px 0 rgba($black, 0.2);
+  }
+
+  &.-archive>.applicantProfile>h5 {
+
+    color: rgba($black, 0.6);
+
+  }
+
+  &.-archive>.applicantProfile>.positionDetails {
+
+    color: rgba($black, 0.6);
+
+  }
+
+  >.applicantProfile>h5 {
+    font-weight: 500;
+    margin-bottom: 0px;
+    color: $blue;
+
+    @include respond-to("to-small") {
+      font-size: 1em;
+    }
+  }
+
+  >.applicantProfile>.positionDetails {
+    color: $black;
+    font-size: 0.875em;
+  }
+
+  .entryTimeStamp {
+    color: rgba($black, 0.6);
+    font-size: 0.750em;
+
+  }
+
+  .btn {
+    border-width: 2px;
+
+    &:not(.btn-link) {
+      @include respond-to("medium") {
+        width: 140px;
+      }
+    }
+
+    @include respond-to("to-medium") {
+      font-size: 1em;
+    }
+  }
+
+
+  .moreDropdown>.dropdown-toggle::after {
+    display: none;
+  }
+}
