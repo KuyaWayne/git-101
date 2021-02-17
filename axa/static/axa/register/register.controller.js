@@ -32,7 +32,9 @@
           }
           resolve(encoded);
         };
-        reader.onerror = error => reject(error);
+        reader.onerror = function(error) {
+          reject(error);
+        };
       });
     }
 

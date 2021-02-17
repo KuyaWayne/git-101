@@ -12,5 +12,5 @@ try:
 except Exception:
     DEBUG = False
 
-AXA_API = os.environ['AXA_API']
+AXA_API = os.environ.get('AXA_API', 'https://goodmorning-axa-dev.azure-api.net')
 AXA_KEY = os.environ.get('AXA_KEY', '')

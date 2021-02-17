@@ -6,28 +6,22 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Francis Roy Stanley Falcon",
   "license": "ISC",
   "dependencies": {
     "@uirouter/angularjs": "^1.0.22",
     "angular": "^1.7.8",
-    "angular-animate": "^1.7.8",
     "angular-block-ui": "^0.2.2",
-    "angular-filter": "^0.5.17",
     "angular-sanitize": "^1.7.8",
     "angular-ui-bootstrap": "^2.5.6",
     "bootstrap": "^4.3.1",
     "gulp": "^4.0.2",
     "jquery": "^3.4.1",
-    "ng-file-upload": "^12.2.13",
-    "ui-router-breadcrumbs": "^1.2.4",
-    "ui-router-metatags": "^1.0.4"
+    "ng-file-upload": "^12.2.13"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.9.0",
     "browser-sync": "^2.26.7",
-    "gulp-angular-templatecache": "^3.0.0",
-    "gulp-clean-css": "^4.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-header": "^2.0.9",
     "gulp-jshint": "^2.1.0",
