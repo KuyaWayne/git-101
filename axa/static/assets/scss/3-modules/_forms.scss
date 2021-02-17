@@ -1,0 +1,323 @@
+// form progress
+
+.progressbar {
+	list-style: none;
+	padding-left: 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	>.step a {
+		font-size: 1.25em;
+		font-weight: 500;
+		border: 2px solid $gray3;
+		height: 2.4em;
+		width: 2.4em;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		position: relative;
+		color: $blue;
+	}
+
+	>.step a:hover {
+		text-decoration: none;
+	}
+
+	>.step+.step {
+		margin-left: 36px;
+	}
+
+	>.step+.step a::before {
+		content: "";
+		height: 2px;
+		width: 36px;
+		position: absolute;
+		left: -38px;
+		background-color: $gray3;
+	}
+
+	>.step.active a {
+		border-color: $blue;
+		background-color: $blue;
+		color: $white;
+	}
+
+	>.step.current a {
+		border-color: $blue;
+	}
+
+	>.step.current::before {
+		background-color: $blue;
+	}
+}
+
+.form-control {
+	font-size: 1em;
+
+	&::-webkit-input-placeholder {
+		/* Edge */
+		color: rgba($black, 0.6);
+	}
+
+	&:-ms-input-placeholder {
+		/* Internet Explorer 10-11 */
+		color: rgba($black, 0.6);
+	}
+
+	&::placeholder {
+		color: rgba($black, 0.6);
+	}
+}
+
+.input-group {
+	>.btn:last-child {
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+}
+
+.input-group>.form-control {
+	border-right: 1px solid $white2;
+}
+
+@include respond-to("to-small") {
+	.input-group.d-flex-sm-none {
+		display: inline-block;
+	}
+
+	.input-group.d-flex-sm-none>.form-control {
+		border-radius: 0;
+	}
+
+	.input-group.d-flex-sm-none>.form-control:first-child {
+		border-top-right-radius: 5px;
+		border-top-left-radius: 5px;
+	}
+
+	.input-group.d-flex-sm-none>.form-control:last-child {
+		border-bottom-right-radius: 5px;
+		border-bottom-left-radius: 5px;
+	}
+
+	.input-group.d-flex-sm-none>.btn {
+		border-radius: 0;
+	}
+
+	.input-group.d-flex-sm-none>.btn:last-child {
+		border-bottom-right-radius: 5px;
+		border-bottom-left-radius: 5px;
+	}
+
+	.input-group.d-flex-sm-none>.form-control,
+	.input-group.d-flex-sm-none>.btn {
+		width: 100%;
+	}
+}
+
+@include respond-to("to-medium") {
+	.input-group.d-flex-md-none {
+		display: inline-block;
+	}
+
+	.input-group.d-flex-md-none>.form-control {
+		border-radius: 0;
+	}
+
+	.input-group.d-flex-md-none>.form-control:first-child {
+		border-top-right-radius: 5px;
+		border-top-left-radius: 5px;
+	}
+
+	.input-group.d-flex-md-none>.form-control:last-child {
+		border-bottom-right-radius: 5px;
+		border-bottom-left-radius: 5px;
+	}
+
+	.input-group.d-flex-md-none>.btn {
+		border-radius: 0;
+	}
+
+	.input-group.d-flex-md-none>.btn:last-child {
+		border-bottom-right-radius: 5px;
+		border-bottom-left-radius: 5px;
+	}
+
+	.input-group.d-flex-md-none>.form-control,
+	.input-group.d-flex-md-none>.btn {
+		width: 100%;
+	}
+}
+
+// material forms
+
+.m-input-container {
+	position: relative;
+	margin-bottom: 0.875em;
+
+	.input-text {
+		border: 2px solid #8e8e8c;
+		padding: 0.875em 0.938em;
+		outline: none;
+		transition: 0.2s ease-in-out;
+		box-sizing: border-box;
+		width: 100%;
+		color: rgba($black, 0.6);
+	}
+
+	.input-text[type="date"] {
+		color: transparent;
+	}
+
+	label {
+		top: 0;
+		left: 10px;
+		height: 3.5em;
+		color: #6a6a66;
+		display: flex;
+		align-items: center;
+		position: absolute;
+		font-size: 1em;
+		cursor: text;
+		transition: top 0.2s ease-in-out;
+		box-sizing: border-box;
+		margin-bottom: 0px;
+		font-size: 1em;
+		padding: 5px;
+	}
+
+	/* Interaction */
+	// input:valid,
+	// input:focus {
+	// 	 border-bottom: 2px solid #26a69a;
+	// }
+	.input-text:valid,
+	.input-text:focus {
+		color: #3a3a3a;
+		border-color: #8e8e8c;
+		box-shadow: 0 0 0 0rem rgba(0, 123, 255, .25);
+	}
+
+	.input-text:valid+label,
+	.input-text:focus+label {
+		background-color: $white;
+		height: auto;
+		line-height: 1;
+		width: auto;
+		font-size: 0.75em;
+		top: -11px;
+		pointer-events: none;
+
+	}
+
+	&.-select {
+		position: relative;
+	}
+
+	&.-select:after {
+		content: url(../images/angle-down-dark.svg);
+		position: absolute;
+		top: 13px;
+		right: 10px;
+		padding: 1px;
+		background-color: $white;
+	}
+
+	&.-select .input-text.form-control {
+		height: 3.313em;
+	}
+
+	&.-select .input-text+label {
+		background-color: $white;
+		height: auto;
+		line-height: 1;
+		width: auto;
+		font-size: 0.75em;
+		top: -11px;
+		pointer-events: none;
+	}
+}
+
+select.form-control {
+	border: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	-ms-appearance: none;
+	/* get rid of default appearance for IE8, 9 and 10*/
+
+
+}
+
+
+.tag-list {
+	list-style: none;
+	padding-left: 0px;
+	margin: 0px;
+
+	>li {
+		display: inline;
+	}
+
+	.btn {
+		margin: 5px;
+	}
+}
+
+
+.privacy-policy {
+	max-height: 30.000em;
+	text-align: left;
+	overflow: auto;
+	border-radius: 5px;
+	border: 1px solid $gray2;
+	background-color: $bg;
+	padding: 2.500em;
+
+	p {
+		color: $black;
+		font-size: 0.750em;
+	}
+}
+
+.autocomplete-suggestions {
+	text-align: left;
+	cursor: default;
+	border: 1px solid #ccc;
+	border-top: 0;
+	background: #fff;
+	box-shadow: 0 20px 40px 0 rgba($black, 0.4);
+	/* core styles should not be changed */
+	position: absolute;
+	display: none;
+	z-index: 9999;
+	max-height: 254px;
+	overflow: hidden;
+	overflow-y: auto;
+	box-sizing: border-box;
+}
+
+.autocomplete-suggestion {
+	position: relative;
+	padding: 1em;
+	line-height: 23px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 0.875em;
+	color: #333;
+}
+
+.autocomplete-suggestion b {
+	font-weight: bold;
+	color: $blue;
+}
+
+.autocomplete-suggestion.selected {
+	background: $white;
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+	background-color: $blue !important;
+}

@@ -1,0 +1,25 @@
+.recruiter-card {
+  @include respond-to("to-medium") {
+    text-align: center;
+  }
+}
+
+.profileDetails>.position {
+  text-transform: uppercase;
+
+}
+
+
+.profileDetails>.agencyDetails {
+  font-size: 0.875em;
+  color: rgba($white, 0.6);
+}
+
+.profileDetails>.agencyDetails>.email {
+  color: rgba($white, 0.6);
+}
+
+.profileDetails>.location {
+  font-size: 0.875em;
+  color: rgba($black, 0.6);
+}

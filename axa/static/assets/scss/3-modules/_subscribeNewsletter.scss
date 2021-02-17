@@ -1,0 +1,40 @@
+.subscribeNewsletter {
+    background: center / cover no-repeat url('../images/newsletter-bg.jpg');
+
+    &.bodyContents-section {
+
+        padding: 4.563em 0;
+    }
+
+    &.dark-bg .h3 {
+        color: $white;
+    }
+
+    form .form-control {
+        font-size: 1.286em;
+        line-height: 1.222em;
+        padding: 1em 1.444em;
+        border-width: 0px;
+
+        @include respond-to("to-medium") {
+            border-bottom: 1px solid $white2;
+            text-align: center;
+        }
+
+        @include respond-to("medium") {
+            font-size: 1.125em;
+            border-right: 1px solid $white2;
+        }
+    }
+
+    form .btn {
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $blue3;
+        padding: 1.125em;
+        background-color: $white;
+        border-width: 0px;
+    }
+
+
+}

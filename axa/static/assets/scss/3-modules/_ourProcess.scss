@@ -1,0 +1,66 @@
+.our-process {
+  margin-top: 1.063em;
+  margin-bottom: 1.063em;
+
+  @include respond-to("medium") {
+    margin-bottom: 2.375em;
+  }
+
+  .singleProcess {
+    position: relative;
+    padding-top: 1.375em;
+    padding-bottom: 1.375em;
+
+    @include respond-to("medium") {
+      text-align: center;
+    }
+  }
+
+  // .singleProcess + .singleProcess::before {
+  // 	content: "";
+  // 	background: url(../images/process-arrow.png);
+  // 	background-size: 100% 100%;
+  // 	position: absolute;
+  // 	height: 46px;
+  // 	width: 15px;
+  // 	@include respond-to("to-medium") {
+  // 		transform: rotate(90deg);
+  // 		top: -25px;
+  // 		left: 50px;
+  // 	}
+  // 	@include respond-to("medium") {
+  // 		left: -15px;
+  // 		height: 92px;
+  // 		width: 30px;
+  // 	}
+  // }
+
+  .singleProcess+.singleProcess::before {
+    position: absolute;
+
+    @include respond-to("medium") {
+      content: "";
+      background: url(../images/process-arrow.png);
+      background-size: 100% 100%;
+      left: -15px;
+      height: 92px;
+      width: 30px;
+    }
+  }
+
+  .singleProcess .processIcon {
+    width: 100%;
+
+    @include respond-to("medium") {
+      margin-bottom: 2.063em;
+      max-width: 98px;
+      max-height: 98px;
+    }
+  }
+
+  .singleProcess .processDetails {}
+
+  .singleProcess .processDetails p {
+    margin-bottom: 0px;
+  }
+}
